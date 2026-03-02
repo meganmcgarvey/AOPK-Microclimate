@@ -16,7 +16,7 @@ library(bslib)
 
 # --- 1. DATA LOADING ---
 # Load metadata and raw data at startup
-metadata <- read_csv("Data/GPS_dates.csv") %>%
+metadata <- read_csv("Data/sample_GPS_dates.csv") %>%
   mutate(start_date = ymd(start_date), end_date = ymd(end_date))
 
 raw_data <- read_csv("Outputs/Compiled_Microclimate_Data.csv", col_types = cols(.default = "c"))
